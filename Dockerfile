@@ -9,16 +9,7 @@ RUN apt-get update -yqq && \
         gnupg \
         inetutils-ping \
         iproute2 \
-        libasound2t64 \
-        libatk-bridge2.0-0t64 \
-        libatk1.0-0t64 \
-        libatspi2.0-0t64 \
-        libgbm1 \
         libmagic1 \
-        libxcomposite1 \
-        libxdamage1 \
-        libxfixes3 \
-        libxrandr2 \
         lsof \
         net-tools \
         netcat-openbsd \
@@ -32,6 +23,7 @@ RUN apt-get update -yqq && \
     && \
     curl -fsSL https://deb.nodesource.com/setup_22.x | bash && \
     apt-get install -y --no-install-recommends nodejs && \
+    npx -y playwright@latest install --with-deps chromium && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

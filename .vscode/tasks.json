@@ -4,7 +4,7 @@
     {
       "label": "Claude",
       "type": "shell",
-      "command": "../llmbox/claudebox.sh",
+      "command": "../llmbox/claude.sh",
       "options": {
         "cwd": "${workspaceFolder}"
       },

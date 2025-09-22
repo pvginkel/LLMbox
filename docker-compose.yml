@@ -23,5 +23,7 @@ services:
       - ../backend/.git:/work/backend/.git:ro
       - ../frontend:/work/frontend:rw
       - ../frontend/.git:/work/frontend/.git:ro
+      - ../claudebox:/work/claudebox:rw
+      - ../claudebox/.git:/work/claudebox/.git:ro
     # Required for Chromium
     shm_size: 1G

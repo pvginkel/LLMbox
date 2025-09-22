@@ -30,7 +30,8 @@ RUN apt-get update -yqq && \
 ENV PATH="/home/ubuntu/.npm-global/bin:${PATH}"
 
 RUN su - ubuntu -c "npm config set prefix ~/.npm-global" && \
-    su - ubuntu -c "npm install -g pnpm @anthropic-ai/claude-code"
+    su - ubuntu -c "npm update -g npm" && \
+    su - ubuntu -c "npm install -g pnpm @anthropic-ai/claude-code @openai/codex"
 
 RUN pipx install --global \
         mypy \

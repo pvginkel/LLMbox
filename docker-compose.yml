@@ -1,5 +1,5 @@
 services:
-  claudebox:
+  llmbox:
     build:
       context: .
       dockerfile: Dockerfile
@@ -16,6 +16,7 @@ services:
       # - /etc/group:/etc/group:ro
       - ${HOME}/.claude.json:/home/ubuntu/.claude.json:rw
       - ${HOME}/.claude:/home/ubuntu/.claude:rw
+      - ${HOME}/.codex:/home/ubuntu/.codex:rw
       - ${HOME}/.vimrc:/home/ubuntu/.vimrc:ro
       - ${HOME}/.gitconfig:/home/ubuntu/.gitconfig:ro
       - ${HOME}/.cache:/home/ubuntu/.cache:rw
@@ -23,7 +24,7 @@ services:
       - ../backend/.git:/work/backend/.git:ro
       - ../frontend:/work/frontend:rw
       - ../frontend/.git:/work/frontend/.git:ro
-      - ../claudebox:/work/claudebox:rw
-      - ../claudebox/.git:/work/claudebox/.git:ro
+      - ../llmbox:/work/llmbox:rw
+      - ../llmbox/.git:/work/llmbox/.git:ro
     # Required for Chromium
     shm_size: 1G

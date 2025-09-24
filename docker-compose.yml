@@ -1,8 +1,6 @@
 services:
   llmbox:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: registry:5000/llmbox:latest
     network_mode: host
     pid: host
     working_dir: /work

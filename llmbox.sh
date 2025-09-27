@@ -33,4 +33,4 @@ else
     RUN=$*
 fi
 
-docker compose -f $COMPOSE_FILE run --pull=always --rm llmbox $RUN
+docker compose -f $COMPOSE_FILE --project-directory $DIR run --pull=always --rm llmbox $RUN

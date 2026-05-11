@@ -29,7 +29,7 @@ if [ "$(basename "$0")" = "claudebox" ]; then
     # RUN="/usr/bin/thunk.sh claude --dangerously-skip-permissions $*"
     RUN="claude --dangerously-skip-permissions --remote-control $*"
 elif [ "$(basename "$0")" = "codexbox" ]; then
-    RUN="/usr/bin/thunk.sh codex --model gpt-5-codex --dangerously-bypass-approvals-and-sandbox $*"
+    RUN="/usr/bin/thunk.sh codex --dangerously-bypass-approvals-and-sandbox $*"
 else
     RUN=$*
 fi
